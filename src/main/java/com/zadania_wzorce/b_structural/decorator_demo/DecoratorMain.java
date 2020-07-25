@@ -22,6 +22,8 @@ public class DecoratorMain {
         circle1.draw();
         System.out.println();
 
+        System.out.println("Tworzenie udekorowanego, niebieskiego prostokąta z zielonym obrysem w stylu dash_space " +
+                "i grubością linii 3.0...");
         Shape rectangle1 =
                 new FillColorDecorator(
                         new LineColorDecorator(
@@ -31,5 +33,6 @@ public class DecoratorMain {
 
 
         rectangle1.draw();
+        System.out.println();
     }
 }
