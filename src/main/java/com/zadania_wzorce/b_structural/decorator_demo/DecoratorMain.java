@@ -16,12 +16,20 @@ public class DecoratorMain {
                 new FillColorDecorator(
                         new LineColorDecorator(
                                 new LineStyleDecorator(
-                                        new LineThicknessDecorator(new Circle(), 2.0d), LineStyle.DASH),
-                                Color.BLUE), Color.RED);
+                                        new LineThicknessDecorator(
+                                                new Circle(), 2.0d), LineStyle.DASH), Color.BLUE), Color.RED);
 
         circle1.draw();
         System.out.println();
 
+        Shape rectangle1 =
+                new FillColorDecorator(
+                        new LineColorDecorator(
+                                new LineStyleDecorator(
+                                        new LineThicknessDecorator(
+                                                new Rectangle(), 3.0d), LineStyle.DASH_SPACE), Color.GREEN), Color.BLUE);
 
+
+        rectangle1.draw();
     }
 }
