@@ -13,6 +13,8 @@ public class BuilderMain {
         System.out.println("is a sinner - " + adas.isSinner());
         System.out.println("is a worshipper - " + adas.isWorshipper());
 
+        //toDo: zrob Ewkę!
+        //toDo: Builder Animal!
 
 
     }
