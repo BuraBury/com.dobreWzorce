@@ -9,6 +9,18 @@ public class DecoratorMain {
         cat.pet();
         dog.pet();
         System.out.println();
+
+        System.out.println("Tworzenie udekorowanego obiektu typu Pies...");
+        Animal decDog =
+                new WeightDecorator(
+                        new NameDecorator(
+                                new FurrColorDecorator(
+                                        new CollarCollorDecorator(
+                                                new EyesCollorDecorator(new Dog(), Color.BLACK), Color.ORANGE), Color.WHITE), "Bercik"), 20);
+        decDog.pet();
+        System.out.println();
+
+
         System.out.println("Tworzenie udekorowanego obiektu typu Pies...");
         Animal dog1 =
                 new WeightDecorator(

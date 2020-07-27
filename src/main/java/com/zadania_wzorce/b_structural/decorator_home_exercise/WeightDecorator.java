@@ -12,6 +12,11 @@ public class WeightDecorator extends AnimalDecorator {
         this.weight = scanner.nextDouble();
     }
 
+    public WeightDecorator(Animal animal, double weight) {
+        super(animal);
+        this.weight = weight;
+    }
+
     @Override
     public String description() {
         return decoratedAnimal.description();

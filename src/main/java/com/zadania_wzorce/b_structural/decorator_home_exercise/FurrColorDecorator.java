@@ -13,6 +13,11 @@ public class FurrColorDecorator extends AnimalDecorator {
 
     }
 
+    public FurrColorDecorator(Animal animal, Color color) {
+        super(animal);
+        this.color = color;
+
+    }
     @Override
     public String description() {
         return decoratedAnimal.description();

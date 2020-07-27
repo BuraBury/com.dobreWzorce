@@ -12,6 +12,11 @@ public class EyesCollorDecorator extends AnimalDecorator {
         this.color = Color.valueOf(scanner.next().toUpperCase());
 
     }
+    public EyesCollorDecorator(Animal animal, Color color) {
+        super(animal);
+        this.color = color;
+
+    }
 
     @Override
     public String description() {
