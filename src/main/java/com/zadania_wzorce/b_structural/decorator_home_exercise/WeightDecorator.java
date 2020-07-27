@@ -9,7 +9,11 @@ public class WeightDecorator extends AnimalDecorator {
     public WeightDecorator(Animal animal) {
         super(animal);
         System.out.println("Podaj wagę zwierzęcia: ");
-        this.weight = scanner.nextDouble();
+        try {
+            this.weight = scanner.nextDouble();
+        } catch (Exception e) {
+            System.out.println("Błędna waga");
+        }
     }
 
     public WeightDecorator(Animal animal, double weight) {

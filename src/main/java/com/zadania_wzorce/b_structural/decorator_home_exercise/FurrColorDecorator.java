@@ -9,7 +9,12 @@ public class FurrColorDecorator extends AnimalDecorator {
     public FurrColorDecorator(Animal animal) {
         super(animal);
         System.out.println("Jakiego koloru ma być sierść?");
-        this.color = Color.valueOf(scanner.nextLine().toUpperCase());
+        try {
+            this.color = Color.valueOf(scanner.next().toUpperCase());
+        } catch (Exception e) {
+            System.out.println("Nie ma takiego koloru");
+            this.color = Color.DEFAULT;
+        }
 
     }
 
@@ -18,6 +23,7 @@ public class FurrColorDecorator extends AnimalDecorator {
         this.color = color;
 
     }
+
     @Override
     public String description() {
         return decoratedAnimal.description();

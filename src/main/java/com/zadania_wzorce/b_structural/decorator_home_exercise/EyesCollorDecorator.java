@@ -9,9 +9,15 @@ public class EyesCollorDecorator extends AnimalDecorator {
     public EyesCollorDecorator(Animal animal) {
         super(animal);
         System.out.println("Jakiego koloru mają być oczy?");
-        this.color = Color.valueOf(scanner.next().toUpperCase());
+        try {
+            this.color = Color.valueOf(scanner.next().toUpperCase());
+        } catch (Exception e) {
+            System.out.println("Nie ma takiego koloru");
+            this.color = Color.DEFAULT;
+        }
 
     }
+
     public EyesCollorDecorator(Animal animal, Color color) {
         super(animal);
         this.color = color;

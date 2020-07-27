@@ -9,7 +9,11 @@ public class NameDecorator extends AnimalDecorator {
     public NameDecorator(Animal animal) {
         super(animal);
         System.out.println("Podaj imię zwierzęcia: ");
-        this.name = scanner.nextLine();
+        try {
+            this.name = scanner.nextLine();
+        } catch (Exception e) {
+            System.out.println("Coś poszło nie tak " + e.getMessage());
+        }
     }
 
     public NameDecorator(Animal animal, String name) {
