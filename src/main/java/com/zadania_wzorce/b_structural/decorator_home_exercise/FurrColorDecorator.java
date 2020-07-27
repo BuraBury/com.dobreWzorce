@@ -8,11 +8,11 @@ public class FurrColorDecorator extends AnimalDecorator {
 
     public FurrColorDecorator(Animal animal) {
         super(animal);
-        System.out.println("Jakiego koloru ma być sierść?");
+        System.out.println("What color is your pet's fur?");
         try {
             this.color = Color.valueOf(scanner.next().toUpperCase());
         } catch (Exception e) {
-            System.out.println("Nie ma takiego koloru");
+            System.out.println("There's no such color");
             this.color = Color.DEFAULT;
         }
 
@@ -32,6 +32,6 @@ public class FurrColorDecorator extends AnimalDecorator {
     @Override
     public void pet() {
         decoratedAnimal.pet();
-        System.out.println("Kolor sierści: " + color);
+        System.out.println("Fur color: " + color);
     }
 }

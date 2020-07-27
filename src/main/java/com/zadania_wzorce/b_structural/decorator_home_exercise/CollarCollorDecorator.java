@@ -8,11 +8,11 @@ public class CollarCollorDecorator extends AnimalDecorator {
 
     public CollarCollorDecorator(Animal animal) {
         super(animal);
-        System.out.println("Jakiego koloru ma być obroża?");
+        System.out.println("What color is your pet's collar?");
         try {
             this.color = Color.valueOf(scanner.next().toUpperCase());
         } catch (Exception e) {
-            System.out.println("Nie ma takiego koloru");
+            System.out.println("There's no such color...");
             this.color = Color.DEFAULT;
         }
     }
@@ -30,6 +30,6 @@ public class CollarCollorDecorator extends AnimalDecorator {
     @Override
     public void pet() {
         decoratedAnimal.pet();
-        System.out.println("Kolor obroży: " + color);
+        System.out.println("Collar color: " + color);
     }
 }

@@ -2,15 +2,15 @@ package com.zadania_wzorce.b_structural.decorator_home_exercise;
 
 public class DecoratorMain {
     public static void main(String[] args) {
-        System.out.println("Tworzenie zwykłych obiektów Animal...");
+        System.out.println("Creating classic Animals...");
         Animal cat = new Cat();
         Animal dog = new Dog();
-        System.out.println("Głaskanie zwykłych obiektów Animal");
+        System.out.println("Petting classic Animal");
         cat.pet();
         dog.pet();
         System.out.println();
 
-        System.out.println("Tworzenie udekorowanego obiektu typu Pies...");
+        System.out.println("Creating decorated Object - type Dog...");
         Animal decDog =
                 new WeightDecorator(
                         new NameDecorator(
@@ -21,7 +21,7 @@ public class DecoratorMain {
         System.out.println();
 
 
-        System.out.println("Tworzenie udekorowanego obiektu typu Pies...");
+        System.out.println("Creating custom Object - type Dog...");
         Animal dog1 =
                 new WeightDecorator(
                         new NameDecorator(
@@ -32,7 +32,7 @@ public class DecoratorMain {
         dog1.pet();
         System.out.println();
 
-        System.out.println("Tworzenie udekorownego obiektu typu Kot...");
+        System.out.println("Creating custom Object - type Cat...");
         Animal cat1 =
                 new WeightDecorator(
                         new NameDecorator(

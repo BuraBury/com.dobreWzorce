@@ -6,7 +6,7 @@ public enum Color {
     BLACK,
     WHITE,
     ORANGE,
-    MIX,
+    MULTI,
     BROWN,
     GREEN,
     DEFAULT;

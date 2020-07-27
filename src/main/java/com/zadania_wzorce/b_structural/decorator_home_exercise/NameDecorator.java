@@ -8,11 +8,11 @@ public class NameDecorator extends AnimalDecorator {
 
     public NameDecorator(Animal animal) {
         super(animal);
-        System.out.println("Podaj imię zwierzęcia: ");
+        System.out.println("Name of your pet = ");
         try {
             this.name = scanner.nextLine();
         } catch (Exception e) {
-            System.out.println("Coś poszło nie tak " + e.getMessage());
+            System.out.println("Something went wrong " + e.getMessage());
         }
     }
 
@@ -29,6 +29,6 @@ public class NameDecorator extends AnimalDecorator {
     @Override
     public void pet() {
         decoratedAnimal.pet();
-        System.out.println("Imię: " + name);
+        System.out.println("Name: " + name.toUpperCase());
     }
 }

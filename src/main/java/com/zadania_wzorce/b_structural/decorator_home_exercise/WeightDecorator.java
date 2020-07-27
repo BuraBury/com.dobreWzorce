@@ -8,11 +8,11 @@ public class WeightDecorator extends AnimalDecorator {
 
     public WeightDecorator(Animal animal) {
         super(animal);
-        System.out.println("Podaj wagę zwierzęcia: ");
+        System.out.println("Your pet weight = ");
         try {
             this.weight = scanner.nextDouble();
         } catch (Exception e) {
-            System.out.println("Błędna waga");
+            System.out.println("Error " + e.getMessage());
         }
     }
 
@@ -29,9 +29,9 @@ public class WeightDecorator extends AnimalDecorator {
     @Override
     public void pet() {
         decoratedAnimal.pet();
-        System.out.println("Waga: " + weight + "kg");
+        System.out.println("Weight: " + weight + "kg");
         if (weight > 5) {
-            System.out.println("uff grubasek");
+            System.out.println("uff fatty");
         }
     }
 }
