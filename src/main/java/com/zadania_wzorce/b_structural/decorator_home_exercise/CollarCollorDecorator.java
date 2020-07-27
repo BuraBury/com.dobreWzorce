@@ -10,6 +10,7 @@ public class CollarCollorDecorator extends AnimalDecorator {
         super(animal);
         System.out.println("Jakiego koloru ma być obroża?");
         this.color = Color.valueOf(scanner.next().toUpperCase());
+
     }
 
     @Override

@@ -10,6 +10,7 @@ public class EyesCollorDecorator extends AnimalDecorator {
         super(animal);
         System.out.println("Jakiego koloru mają być oczy?");
         this.color = Color.valueOf(scanner.next().toUpperCase());
+
     }
 
     @Override

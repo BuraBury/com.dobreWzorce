@@ -10,6 +10,7 @@ public class FurrColorDecorator extends AnimalDecorator {
         super(animal);
         System.out.println("Jakiego koloru ma być sierść?");
         this.color = Color.valueOf(scanner.nextLine().toUpperCase());
+
     }
 
     @Override
