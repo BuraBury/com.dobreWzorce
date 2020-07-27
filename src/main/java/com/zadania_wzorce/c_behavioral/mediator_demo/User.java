@@ -1,0 +1,15 @@
+package com.zadania_wzorce.c_behavioral.mediator_demo;
+
+public abstract class User {
+    ChatMediator mediator;
+    String name;
+
+    public User(ChatMediator mediator, String name) {
+        this.mediator = mediator;
+        this.name = name;
+    }
+
+    public abstract void send (String msg);
+
+    public abstract void receive(String msg);
+}
