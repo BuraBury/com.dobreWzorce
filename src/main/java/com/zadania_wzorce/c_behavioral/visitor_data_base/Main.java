@@ -16,7 +16,9 @@ public class Main {
         personsDataBase.add(person4);
         personsDataBase.add(person5);
 
-        System.out.println(personsDataBase);
+        //System.out.println(personsDataBase);
+
+        personsDataBase.list.stream().map(Person::toString).forEach(System.out::println);
 
 
     }
