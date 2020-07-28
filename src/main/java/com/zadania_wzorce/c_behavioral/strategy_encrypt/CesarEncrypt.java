@@ -1,4 +1,4 @@
-package com.zadania_wzorce.c_behavioral.strategy_szyfr;
+package com.zadania_wzorce.c_behavioral.strategy_encrypt;
 
 public class CesarEncrypt implements EncryptingStrategy {
 
