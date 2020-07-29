@@ -10,6 +10,7 @@ public class Main {
         Person person3 = new Person("male", 1500, "Andrzej Tubka");
         Person person4 = new Person("male", 5000, "Albert Bercicky");
         Person person5 = new Person("female", 10000, "Elżbieta Zapendowska");
+        Person person6 = new Person("FEMALE", 10000, "Anastazja Grajewska");
 
         DataBase<Person> personsDataBase = new DataBase<>();
         personsDataBase.add(person1);
@@ -17,6 +18,7 @@ public class Main {
         personsDataBase.add(person3);
         personsDataBase.add(person4);
         personsDataBase.add(person5);
+        personsDataBase.add(person6);
 
         //System.out.println(personsDataBase);
 

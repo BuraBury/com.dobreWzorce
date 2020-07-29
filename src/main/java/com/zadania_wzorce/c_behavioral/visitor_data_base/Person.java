@@ -28,9 +28,9 @@ public class Person {
 
     @Override
     public String toString() {
-        return "name: " + name +
+        return "name: " + name.toUpperCase() +
                 "\nincome: " + income + ".00 PLN" +
-                "\ngender: " + gender
+                "\ngender: " + gender.toUpperCase()
                 + "\n";
     }
 
