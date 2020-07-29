@@ -11,6 +11,7 @@ public class Main {
         Person person4 = new Person("male", 5000, "Albert Bercicky");
         Person person5 = new Person("female", 10000, "Elżbieta Zapendowska");
         Person person6 = new Person("FEMALE", 10000, "Anastazja Grajewska");
+        Person person7 = new Person("male", 4000, "Gwidon Grajewski");
 
         DataBase<Person> personsDataBase = new DataBase<>();
         personsDataBase.add(person1);
@@ -19,8 +20,7 @@ public class Main {
         personsDataBase.add(person4);
         personsDataBase.add(person5);
         personsDataBase.add(person6);
-
-        //System.out.println(personsDataBase);
+        personsDataBase.add(person7);
 
         personsDataBase.list.stream().map(Person::toString).forEach(System.out::println);
 

@@ -4,24 +4,24 @@ public interface Visitor {
     static void visit(DataBase<Person> dataBase) {
         int amountFemales = 0;
         int amountMales = 0;
-        int sumOfIncomeFemales = 0;
-        int sumOfIncomeMales = 0;
+        int sumOfIncomesFemales = 0;
+        int sumOfIncomesMales = 0;
 
         for (int i = 0; i < dataBase.list.size(); i++) {
             Person person = dataBase.list.get(i);
             String gender = person.getGender();
             if (gender.equalsIgnoreCase("female")) {
                 amountFemales++;
-                sumOfIncomeFemales += dataBase.list.get(i).getIncome();
+                sumOfIncomesFemales += dataBase.list.get(i).getIncome();
 
             } else {
                 amountMales++;
-                sumOfIncomeMales += dataBase.list.get(i).getIncome();
+                sumOfIncomesMales += dataBase.list.get(i).getIncome();
             }
         }
 
-        double averageFemaleIncome = (double) sumOfIncomeFemales / amountFemales;
-        double averageMaleIncome = (double) sumOfIncomeMales / amountMales;
+        double averageFemaleIncome = (double) sumOfIncomesFemales / amountFemales;
+        double averageMaleIncome = (double) sumOfIncomesMales / amountMales;
 
         int amountOfPersonsInDataBase = amountFemales + amountMales;
         double percentageOfFemalesInDataBase = ((double) amountFemales / amountOfPersonsInDataBase) * 100;
