@@ -1,13 +1,15 @@
 package com.zadania_wzorce.c_behavioral.visitor_data_base;
 
+import static com.zadania_wzorce.c_behavioral.visitor_data_base.Visitor.visit;
+
 public class Main {
     public static void main(String[] args) {
 
-        Person person1 = new Person("female", "2300", "Ala Makota");
-        Person person2 = new Person("female", "3400", "Monika Brodka");
-        Person person3 = new Person("male", "1500", "Andrzej Tubka");
-        Person person4 = new Person("male", "5000", "Albert Bercicky");
-        Person person5 = new Person("female", "10000", "Elżbieta Zapendowska");
+        Person person1 = new Person("female", 2300, "Ala Makota");
+        Person person2 = new Person("female", 3400, "Monika Brodka");
+        Person person3 = new Person("male", 1500, "Andrzej Tubka");
+        Person person4 = new Person("male", 5000, "Albert Bercicky");
+        Person person5 = new Person("female", 10000, "Elżbieta Zapendowska");
 
         DataBase<Person> personsDataBase = new DataBase<>();
         personsDataBase.add(person1);
@@ -19,6 +21,8 @@ public class Main {
         //System.out.println(personsDataBase);
 
         personsDataBase.list.stream().map(Person::toString).forEach(System.out::println);
+
+        visit(personsDataBase);
 
 
     }

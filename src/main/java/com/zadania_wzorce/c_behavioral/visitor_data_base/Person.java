@@ -3,11 +3,12 @@ package com.zadania_wzorce.c_behavioral.visitor_data_base;
 import java.util.Objects;
 
 public class Person {
+
     private final String gender;
-    private final String income;
+    private final int income;
     private final String name;
 
-    public Person(String gender, String income, String name) {
+    public Person(String gender, int income, String name) {
         this.gender = gender;
         this.income = income;
         this.name = name;
@@ -17,7 +18,7 @@ public class Person {
         return gender;
     }
 
-    public String getIncome() {
+    public int getIncome() {
         return income;
     }
 
@@ -47,4 +48,6 @@ public class Person {
     public int hashCode() {
         return Objects.hash(gender, income, name);
     }
+
+
 }

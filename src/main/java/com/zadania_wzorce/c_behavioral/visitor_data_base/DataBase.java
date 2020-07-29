@@ -3,7 +3,7 @@ package com.zadania_wzorce.c_behavioral.visitor_data_base;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class DataBase<T> {
+public class DataBase<T> implements Visitor {
     ArrayList<T> list;
 
     public DataBase() {
@@ -16,7 +16,7 @@ public class DataBase<T> {
 
     @Override
     public String toString() {
-       return list.toString();
+        return list.toString();
     }
 
     @Override
