@@ -10,8 +10,9 @@ public class Main {
         System.out.println("How many chars do you need to move?");
         int offset = sc.nextInt();
 
-        EncryptContext cezarEncrypt = new EncryptContext(new CesarEncrypt());
-        cezarEncrypt.executeEncrypt(text, offset);
+        EncryptContext cesarEncrypt = new EncryptContext(new CesarEncrypt());
+        cesarEncrypt.executeEncrypt(text, offset);
+
 
 
     }
